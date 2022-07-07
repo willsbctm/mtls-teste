@@ -38,7 +38,7 @@ Rodar [docker-run-servidor.sh](https://github.com/willsbctm/mtls-teste/blob/main
 
 ## Realizar chamada do cliente no servidor
 
-Rodar [run-cliente.sh](https://github.com/willsbctm/mtls-teste/blob/main/src/run-cliente.sh) para realizar uma chamada curl informando o client.crt e client.key
+Rodar [run-cliente-curl.sh](https://github.com/willsbctm/mtls-teste/blob/main/src/run-cliente-curl.sh) para realizar uma chamada curl informando o client.crt e client.key
 ```
 ./run-cliente.sh
 ```
