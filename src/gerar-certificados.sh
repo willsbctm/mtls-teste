@@ -12,3 +12,6 @@ openssl req -new -newkey rsa:4096 -keyout certs/client.key -out certs/client.csr
 
 # Assinar csr com o CA e gerar certificado do cliente
 openssl x509 -req -sha256 -days 365 -in certs/client.csr -CA certs/ca.crt -CAkey certs/ca.key -set_serial 02 -out certs/client.crt
+
+rm certs/ca.key
+rm certs/client.csr
