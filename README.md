@@ -1,7 +1,7 @@
 # Instalação
 
 Para executar os exemplos será necessário:
-- Terminal para executar bash
+- Terminal shell
 - dotnet sdk 6.0
 - docker
 - openssl cli
