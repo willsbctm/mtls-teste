@@ -1,7 +1,15 @@
 # Instalação
+
+Para executar os exemplos será necessário:
+- Terminal para executar bash
+- dotnet sdk 6.0
+- docker
+- openssl cli
+
 Abrir um terminal no diretório [/src](https://github.com/willsbctm/mtls-teste/tree/main/src) e seguir os próximos passos
 
 ## Configurar host
+
 Apontar o endereço test.localdev.me para 127.0.0.1 na sua máquina
 
 ## Gerar Certificados
