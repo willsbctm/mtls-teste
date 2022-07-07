@@ -72,13 +72,10 @@ Rodar [run-cliente-dotnet.sh](https://github.com/willsbctm/mtls-teste/blob/main/
 # Conceitos
 
 
-- TLS
+- TLS x mTLS
 
-![desenho tls](imagens/tls.jpg "desenho tls")
-
-- mTLS
-
-![desenho tls](imagens/mtls.jpg "desenho tls")
+[<img src="imagens/tls.jpg" width="400px"/>](imagens/tls.jpg)
+[<img src="imagens/mtls.jpg" width="396px"/>](imagens/tls.jpg)
 
 Algumas questões interessantes:
 1) O certificado do servidor não tem nenhuma relação com o certificado do cliente.
