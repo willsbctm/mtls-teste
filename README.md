@@ -71,3 +71,30 @@ Rodar [run-cliente-dotnet.sh](https://github.com/willsbctm/mtls-teste/blob/main/
 
 # Conceitos
 
+
+- TLS
+
+![desenho tls](imagens/tls.jpg "desenho tls")
+
+- mTLS
+
+![desenho tls](imagens/mtls.jpg "desenho tls")
+
+Algumas questões interessantes:
+1) O certificado do servidor não tem nenhuma relação com o certificado do cliente.
+2) O servidor aceita comunicação com o cliente se o certificado do cliente for assinado pela autoridade de certificados de cliente configurada no servidor.
+3) O servidor aceita qualquer certificado de cliente assinado pela autoridade configurada.
+4) O certificado do cliente provavelmente será assinado por uma autoridade interna da organização para que os certificados de cliente aceitos pelo servidor estejam sob controle.
+5) Para realizar uma chamada dotnet utilizando HttpClient, é necessário:
+```c#
+var certificado = X509Certificate2.CreateFromPemFile("client.crt", "client.key");
+var handler = new HttpClientHandler();
+handler.ClientCertificateOptions = ClientCertificateOption.Manual;
+handler.ClientCertificates.Add(certificado);
+var client = new HttpClient(handler);
+var resultado = await client.GetAsync("https://test.localdev.me/index.html");
+```
+
+
+# Em resumo
+O mTLS tem o fluxo normal do TLS somado a uma validação por parte do servidor do certificado informado pelo cliente através do ca root configurado no servidor, dessa forma o cliente também consegue provar ser quem ele deve ser para o servidor.
