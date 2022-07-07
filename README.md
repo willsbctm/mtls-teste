@@ -38,9 +38,16 @@ Rodar [docker-run-servidor.sh](https://github.com/willsbctm/mtls-teste/blob/main
 
 ## Realizar chamada do cliente no servidor
 
+### Via curl
 Rodar [run-cliente-curl.sh](https://github.com/willsbctm/mtls-teste/blob/main/src/run-cliente-curl.sh) para realizar uma chamada curl informando o client.crt e client.key
 ```
-./run-cliente.sh
+./run-cliente-curl.sh
+```
+
+### Via dotnet
+Rodar [run-cliente-dotnet.sh](https://github.com/willsbctm/mtls-teste/blob/main/src/run-cliente-dotnet.sh) para realizar uma chamada utilizando HttpClient e informando o client.crt e client.key
+```
+./run-cliente-dotnet.sh
 ```
 
 # Resultado esperado
